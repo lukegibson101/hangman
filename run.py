@@ -8,12 +8,26 @@ def get_random_word():
     return random_word.upper()
 
 
+def play_game(word):
+    """
+    play the game
+    """
+    word_template = "_" * len(word)
+    game_over = False
+    guesses = []
+    lives = 10
+    print("Lets play Hangman!")
+    print(f"Lives: {lives}")
+    print(f"The word to guess: {word_template}")
+
+
 def main():
     """
     Runs the game 
     """
     hangman_word = get_random_word()
-    print("Lets play hangman!")
-
+    print("Welcome to Hangman!")
+    print(hangman_word)
+    play_game(hangman_word)
 
 main()
