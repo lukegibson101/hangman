@@ -11,18 +11,20 @@ def initialise_game():
     options = False
     while not options:
         settings = input("\n")
-        if settings == 1:
+        if settings == "1":
             options = True
-            print("Play game")
+            difficulty = "default"
+            return difficulty
 
-        elif settings == 2:
+        elif settings == "2":
             options = True
-            print("set difficulty")
+            difficulty = "set"
+            return difficulty          
 
-        elif settings == 3:
+        elif settings == "3":
             options = True
             print("Game Rules")
-            
+
         else:
             print("Please select 1, 2 or 3 to make your choice")
 
@@ -31,7 +33,9 @@ def select_difficulty():
     """
     Let player set difficulty
     """
-    print("Difficulty")
+    if difficulty == "default":
+        difficulty = 8
+        return difficulty
 
 
 def get_random_word():
@@ -43,14 +47,14 @@ def get_random_word():
     return random_word.upper()
 
 
-def play_game(word):
+def play_game(word, num_lives):
     """
     play the game
     """
     word_template = "_" * len(word)
     game_over = False
     guesses = []
-    lives = 10
+    lives = num_lives
     print("Lets play Hangman!\n")
     print(f"Lives: {lives}")
     print(f"The word to guess: " + " ".join(word_template) + "\n")
@@ -112,10 +116,10 @@ def play_game(word):
     else:
         hangman_wins()
 
-    restart_game()
+    restart_game(num_lives)
 
 
-def restart_game():
+def restart_game(num_lives):
     """
     Gives player option to restart, otherwise returns to title screen
     """
@@ -127,7 +131,8 @@ def restart_game():
             if restart == "Y":
                 game_restart = True
                 hangman_word = get_random_word()
-                play_game(hangman_word)
+
+                play_game(hangman_word, num_lives)
 
             elif restart == "N":
                 game_restart = True
@@ -302,10 +307,14 @@ def main():
     """
     print("Welcome to Hangman!")
     print(hangman_lives(0))
-    initialise_game()
-    set_difficulty()
+    difficulty = initialise_game()
+    if difficulty == "default":
+        num_lives = 7
+    else:
+        num_lives = select_difficulty()
+
     hangman_word = get_random_word()
     print(hangman_word)
-    play_game(hangman_word)
+    play_game(hangman_word, num_lives)
 
 main()
