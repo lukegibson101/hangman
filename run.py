@@ -20,7 +20,7 @@ def play_game(word):
     print(f"Lives: {lives}")
     print(f"The word to guess: " + " ".join(word_template))
     
-    while not game_over:
+    while not game_over and lives > 1:
         player_try = input("Guess a letter:\n").upper()
         try:
             if len(player_try) > 1:
