@@ -67,8 +67,8 @@ def play_game(word):
             continue
 
         print(f"Lives: {lives}")
-        print(f"The word to guess: " + " ".join(word_template))
-        print(guesses)
+        print(f"The word to guess: " + " ".join(word_template) + "\n")
+        print("Letters guessed: " + ", ".join(guesses))
 
     print("GAME OVER")
 
