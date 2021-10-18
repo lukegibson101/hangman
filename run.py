@@ -25,15 +25,29 @@ def play_game(word):
         try:
             if len(player_try) > 1:
                 raise ValueError(
-                f"You can only guess 1 letter at a time, you guessed {len(player_try)} characters"
-            )
+                    f"You can only guess 1 letter at a time, you guessed {len(player_try)} characters"
+                )
             elif not player_try.isalpha():
                 raise ValueError(
-                f"You can only guess letters, you guessed {(player_try)} which is not a letter"
-            )
+                    f"You can only guess letters, you guessed {(player_try)} which is not a letter"
+                )
+            elif len(player_try) == 1:
+                if player_try in guesses:
+                    raise ValueError(
+                        f"You have already guessed {(player_try)}"
+                    )
+                elif player_try not in word:
+                    raise ValueError(
+                        f"{(player_try)} is not in the word. You lose a life"
+                    )
+                else:
+                    print(
+                        f"{player_try} is in the word. Well done!"
+                    )
+
         except ValueError as e:
             print(f"{e}, please try again.\n")
-
+            
         
 def main():
     """
@@ -43,5 +57,6 @@ def main():
     print("Welcome to Hangman!")
     print(hangman_word)
     play_game(hangman_word)
+    print("Play Again?")
 
 main()
