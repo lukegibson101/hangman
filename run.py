@@ -31,7 +31,7 @@ def play_game(word):
                 raise ValueError(
                     f"You can only guess letters, you guessed {(player_try)} which is not a letter"
                 )
-            elif len(player_try) == 1:
+            elif len(player_try) == 1 and player_try.isalpha():
                 if player_try in guesses:
                     raise ValueError(
                         f"You have already guessed {(player_try)}"
@@ -40,9 +40,10 @@ def play_game(word):
                     raise ValueError(
                         f"{(player_try)} is not in the word. You lose a life"
                     )
+
                 else:
                     print(
-                        f"{player_try} is in the word. Well done!"
+                        f"{player_try} is in the word. Well done!\n"
                     )
 
         except ValueError as e:
