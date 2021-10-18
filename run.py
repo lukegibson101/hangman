@@ -31,12 +31,12 @@ def play_game(word):
     word_template = "_" * len(word)
     game_over = False
     guesses = []
-    lives = 9
+    lives = 10
     print("Lets play Hangman!\n")
-    print(f"Lives: {lives+1}")
+    print(f"Lives: {lives}")
     print(f"The word to guess: " + " ".join(word_template) + "\n")
 
-    while not game_over and lives >= 0:
+    while not game_over and lives > 0:
         player_try = input("Guess a letter:\n").upper()
         try:
             if len(player_try) > 1:
@@ -82,8 +82,8 @@ def play_game(word):
 
         print(hangman_lives(lives))
 
-        if lives >= 0:
-            print(f"Lives: {lives + 1}")
+        if lives > 0:
+            print(f"Lives: {lives}")
             print(f"The word to guess: " + " ".join(word_template) + "\n")
             print("Letters guessed: " + ", ".join(guesses))
 
@@ -92,7 +92,6 @@ def play_game(word):
 
     else:
         hangman_wins()
-
 
 
 def player_wins():
@@ -130,6 +129,16 @@ def hangman_lives(lives):
         |/        |
         |         O
         |        /|\\
+        |         |
+        |
+        |\\
+        ========
+        """,
+        """
+        __________
+        |/        |
+        |         O
+        |        /|
         |         |
         |
         |\\
