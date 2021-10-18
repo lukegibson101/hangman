@@ -57,7 +57,7 @@ def play_game(word):
                         word_template_list[index] = player_try
                         word_template = "".join(word_template_list)
                     if "_" not in word_template:
-                        guessed = True
+                        game_over = True
 
         except ValueError as e:
             print(f"{e}, please try again.\n")
