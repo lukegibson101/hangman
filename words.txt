@@ -56,7 +56,6 @@ diligent
 wind
 invite
 air
-ill-informed
 wary
 unequal
 fade
@@ -195,7 +194,6 @@ illegal
 sticks
 pet
 carry
-well-groomed
 pause
 vacation
 suggest
@@ -276,7 +274,6 @@ order
 obtain
 suppose
 quince
-well-made
 hang
 pinch
 try
@@ -323,7 +320,6 @@ crash
 giraffe
 plough
 various
-well-off
 steer
 subtract
 worm
