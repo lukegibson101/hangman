@@ -19,6 +19,22 @@ def play_game(word):
     print("Lets play Hangman!")
     print(f"Lives: {lives}")
     print(f"The word to guess: {word_template}")
+    
+    while not game_over:
+        player_try = input("Guess a letter:\n")
+        try:
+            if len(player_try) > 1:
+                raise ValueError(
+                f"You can only guess 1 letter at a time, you guessed {len(player_try)} characters"
+            )
+            elif not player_try.isalpha():
+                raise ValueError(
+                f"You can only guess letters, you guessed {(player_try)} which is not a letter"
+            )
+        except ValueError as e:
+            print(f"{e}, please try again.\n")
+
+        
 
 
 def main():
