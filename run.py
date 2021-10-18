@@ -97,16 +97,16 @@ def play_game(word, num_lives):
                     )
 
                 elif player_try not in word:
-                    
+
                     message = f"{(player_try)} is not in the word. You lose a life."
-                    
+
                     guesses.append(player_try)
                     lives -= 1
 
                 else:
-                    
+
                     message = f"{player_try} is in the word. Well done!"
-                    
+
                     guesses.append(player_try)
                     word_template_list = list(word_template)
                     indices = [i for i, letter in enumerate(word)
