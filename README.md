@@ -12,4 +12,4 @@
 
 
 ### **Resources**
- * [Random Word Generator](https://www.randomlists.com/random-words) - to generate a random word for the game. 
+ * [Random Word Generator](https://www.randomlists.com/random-words) - to generate a random list of 500 words for the game. 
