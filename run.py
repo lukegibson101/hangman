@@ -1,6 +1,14 @@
 import random
 
 
+def initialise_game():
+    print ("Set options")
+    
+
+def select_difficulty():
+    print("Difficulty")
+
+
 def get_random_word():
     """
     Picks a random word from words.txt to be used as the word the player has
@@ -77,8 +85,10 @@ def main():
     """
     Runs the game
     """
-    hangman_word = get_random_word()
     print("Welcome to Hangman!")
+    initialise_game()
+    select_difficulty()
+    hangman_word = get_random_word()
     print(hangman_word)
     play_game(hangman_word)
 
