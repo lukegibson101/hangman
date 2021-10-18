@@ -60,7 +60,7 @@ def get_random_word():
     Picks a random word from words.txt to be used as the word the player has
     to guess.
     """
-    random_word = random.choice(open("words.txt").read().split('\n'))
+    random_word = random.choice(open("words.txt", "r").read().split('\n'))
     return random_word.upper()
 
 
