@@ -82,17 +82,17 @@ def play_game(word):
 
         print(hangman_lives(lives))
 
-        if lives > 0:
+        if lives >= 0:
             print(f"Lives: {lives + 1}")
             print(f"The word to guess: " + " ".join(word_template) + "\n")
             print("Letters guessed: " + ", ".join(guesses))
 
     if game_over:
-        winner = player_wins()
-        print(winner)
+        player_wins()
+
     else:
-        loser = hangman_wins()
-        print(loser)
+        hangman_wins()
+
 
 
 def player_wins():
