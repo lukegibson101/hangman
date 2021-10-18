@@ -56,6 +56,8 @@ def play_game(word):
                     for index in indices:
                         word_template_list[index] = player_try
                         word_template = "".join(word_template_list)
+                    if "_" not in word_template:
+                        guessed = True
 
         except ValueError as e:
             print(f"{e}, please try again.\n")
@@ -64,6 +66,8 @@ def play_game(word):
         print(f"Lives: {lives}")
         print(f"The word to guess: " + " ".join(word_template))
         print(guesses)
+    
+    print("GAME OVER")
             
         
 def main():
