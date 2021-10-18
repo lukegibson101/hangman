@@ -93,12 +93,41 @@ def play_game(word):
     else:
         hangman_wins()
 
+    restart_game()
+
+
 def restart_game():
-    restart = input("Would you like to play again? Y/N")
-    
+    """
+    Gives player option to restart, otherwise returns to title screen
+    """
+    game_restart = False
+
+    while not game_restart:
+        restart = input("Would you like to play again? Y/N\n").upper()
+        try:
+            if restart == "Y":
+                game_restart = True
+                hangman_word = get_random_word()
+                play_game(hangman_word)
+
+            elif restart == "N":
+                game_restart = True
+                main()
+
+            else:
+                raise ValueError(
+                    f"You must type in Y or N. You typed {(restart)}"
+                )
+
+        except ValueError as e:
+            print(f"{e}, please try again.\n")
+
 
 
 def player_wins():
+    """
+    Display You Win! graphic
+    """
     print(
         """
         __   __
@@ -115,6 +144,9 @@ def player_wins():
 
 
 def hangman_wins():
+    """
+    Display Game Over! graphic
+    """
     print(
         """
           ____
@@ -255,7 +287,5 @@ def main():
     hangman_word = get_random_word()
     print(hangman_word)
     play_game(hangman_word)
-    restart_game()
-
 
 main()
