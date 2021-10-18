@@ -27,27 +27,37 @@ def play_game(word):
                 raise ValueError(
                     f"You can only guess 1 letter at a time, you guessed {len(player_try)} characters"
                 )
+
             elif not player_try.isalpha():
                 raise ValueError(
                     f"You can only guess letters, you guessed {(player_try)} which is not a letter"
                 )
+
             elif len(player_try) == 1 and player_try.isalpha():
                 if player_try in guesses:
                     raise ValueError(
                         f"You have already guessed {(player_try)}"
                     )
+
                 elif player_try not in word:
-                    raise ValueError(
+                    print(
                         f"{(player_try)} is not in the word. You lose a life"
                     )
+                    guesses.append(player_try)
+                    lives -= 1
 
                 else:
                     print(
                         f"{player_try} is in the word. Well done!\n"
                     )
+                    guesses.append(player_try)
 
         except ValueError as e:
             print(f"{e}, please try again.\n")
+            continue
+
+        print(f"Lives: {lives}")
+        print(guesses)
             
         
 def main():
