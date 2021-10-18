@@ -323,6 +323,19 @@ def hangman_lives(lives):
     return lives_left[lives]
 
 
+def hangman_title():
+    print(
+        """
+         _   _                                         _  ___  _
+        | | | | __ _ _ __   __ _ _ __ ___   __ _ _ __ / |/ _ \\/ |
+        | |_| |/ _` | '_ \\ / _` | '_ ` _ \\ / _` | '_ \\| | | | | |
+        |  _  | (_| | | | | (_| | | | | | | (_| | | | | | |_| | |
+        |_| |_|\\__,_|_| |_|\\__, |_| |_| |_|\\__,_|_| |_|_|\\___/|_|
+                            |___/
+        """
+    )
+
+
 def game_rules():
     """
     Shows game rules
@@ -345,7 +358,7 @@ def main():
     """
     Runs the game
     """
-    print("Welcome to Hangman!")
+    hangman_title()
     print(hangman_lives(0))
     difficulty = initialise_game()
     if difficulty == "default":
