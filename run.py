@@ -21,7 +21,7 @@ def play_game(word):
     print(f"The word to guess: {word_template}")
     
     while not game_over:
-        player_try = input("Guess a letter:\n")
+        player_try = input("Guess a letter:\n").upper()
         try:
             if len(player_try) > 1:
                 raise ValueError(
@@ -35,8 +35,6 @@ def play_game(word):
             print(f"{e}, please try again.\n")
 
         
-
-
 def main():
     """
     Runs the game 
