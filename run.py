@@ -327,7 +327,7 @@ def game_rules():
         and it is game over!
         """
     )
-    main_menu = input("Press enter to return to the main menu")
+    main_menu = input("Press enter to return to the main menu\n")
     initialise_game()
 
 
