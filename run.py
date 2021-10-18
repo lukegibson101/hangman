@@ -81,7 +81,7 @@ def play_game(word):
             continue
         
         print(hangman_lives(lives))
-        print(f"Lives: {lives}")
+        print(f"Lives: {lives + 1}")
         print(f"The word to guess: " + " ".join(word_template) + "\n")
         print("Letters guessed: " + ", ".join(guesses))
 
@@ -185,9 +185,9 @@ def hangman_lives(lives):
         
         
         
-        |
-        |
-        ========
+        
+        
+        
         """
     ]
 
