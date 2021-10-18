@@ -31,12 +31,12 @@ def play_game(word):
     word_template = "_" * len(word)
     game_over = False
     guesses = []
-    lives = 10
+    lives = 9
     print("Lets play Hangman!\n")
-    print(f"Lives: {lives}")
+    print(f"Lives: {lives+1}")
     print(f"The word to guess: " + " ".join(word_template) + "\n")
 
-    while not game_over and lives > 1:
+    while not game_over and lives >= 0:
         player_try = input("Guess a letter:\n").upper()
         try:
             if len(player_try) > 1:
@@ -79,7 +79,8 @@ def play_game(word):
         except ValueError as e:
             print(f"{e}, please try again.\n")
             continue
-
+        
+        print(hangman_lives(lives))
         print(f"Lives: {lives}")
         print(f"The word to guess: " + " ".join(word_template) + "\n")
         print("Letters guessed: " + ", ".join(guesses))
@@ -90,13 +91,54 @@ def play_game(word):
 def hangman_lives(lives):
     lives_left = [
         """
+        ___________
+        |/        |
+        |         O
+        |        /|\
+        |         |
+        |        / \
+        |\
+        ========
+        """,
+        """
+        ___________
+        |/        |
+        |         O
+        |        /|\
+        |         |
+        |        /
+        |\
+        ========
+        """,
+        """
         __________
-        |/
+        |/        |
+        |         O
+        |        /|\
+        |         |
+        |
+        |\
+        ========
+        """,
+        """
+        __________
+        |/        |
+        |         O
+        |         |
+        |         |
+        |
+        |\
+        ========
+        """,
+        """
+        __________
+        |/        |
+        |         O
         |
         |
         |
-        |
-        |____
+        |\
+        ========
         """,
         """
         __________
@@ -105,7 +147,8 @@ def hangman_lives(lives):
         |
         |
         |
-        |____
+        |\
+        ========
         """,
         """
         __________
@@ -114,55 +157,41 @@ def hangman_lives(lives):
         |
         |
         |
-        |____
+        |
+        ========
         """,
         """
-        __________
+        
         |/
         |
         |
         |
         |
-        |____
-        """,
-        """
-        __________
-        |/
         |
-        |
-        |
-        |
-        |____
-        """,
-        """
-        __________
-        |/
-        |
-        |
-        |
-        |
-        |____
+        ========
         """,
 
         """
-        __________
-        |/
+       
         |
         |
         |
         |
-        |____
+        |
+        ========
         """,
         """
-        __________
-        |/
+        
+        
+        
+        
         |
         |
-        |
-        |
-        |____
+        ========
         """
     ]
+
+    return lives_left[lives]
 
 
 
