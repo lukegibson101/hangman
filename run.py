@@ -1,3 +1,4 @@
+print("Hello world test")
 from random_word import RandomWords
 """
 Imports list of random words.
