@@ -17,7 +17,7 @@ def initialise_game():
             return difficulty
 
         elif settings == "2":
-            options = True 
+            options = True
 
         elif settings == "3":
             options = True
@@ -52,7 +52,6 @@ def select_difficulty():
             return num_lives
         else:
             print("Please select E, N or H to make your choice")
-
 
 
 def get_random_word():
@@ -164,7 +163,6 @@ def restart_game(num_lives):
             print(f"{e}, please try again.\n")
 
 
-
 def player_wins():
     """
     Display You Win! graphic
@@ -204,6 +202,9 @@ def hangman_wins():
 
 
 def hangman_lives(lives):
+    """
+    Displays hangman graphic based on lives left
+    """
     lives_left = [
         """
         ___________
@@ -313,11 +314,13 @@ def hangman_lives(lives):
 
         """
     ]
-
     return lives_left[lives]
 
 
 def game_rules():
+    """
+    Shows game rules
+    """
     print(
         """
         Guess the word by inputting letters.
@@ -344,7 +347,7 @@ def main():
         num_lives = select_difficulty()
 
     hangman_word = get_random_word()
-    print(hangman_word)
     play_game(hangman_word, num_lives)
+
 
 main()
