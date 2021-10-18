@@ -79,13 +79,28 @@ def play_game(word):
         except ValueError as e:
             print(f"{e}, please try again.\n")
             continue
-        
-        print(hangman_lives(lives))
-        print(f"Lives: {lives + 1}")
-        print(f"The word to guess: " + " ".join(word_template) + "\n")
-        print("Letters guessed: " + ", ".join(guesses))
 
-    print("GAME OVER")
+        print(hangman_lives(lives))
+
+        if lives > 0:
+            print(f"Lives: {lives + 1}")
+            print(f"The word to guess: " + " ".join(word_template) + "\n")
+            print("Letters guessed: " + ", ".join(guesses))
+
+    if game_over:
+        winner = player_wins()
+        print(winner)
+    else:
+        loser = hangman_wins()
+        print(loser)
+
+
+def player_wins():
+    print("You won!")
+
+
+def hangman_wins():
+    print("You lost!")
 
 
 def hangman_lives(lives):
