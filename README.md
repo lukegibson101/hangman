@@ -7,6 +7,8 @@
   * Fix: Replaced \ with double \\\\ make \ print to the terminal. 
 * Bug: When on last life, letters guessed and amount of lives fail to show on terminal.
   * Fix: Set lives to lives >=0 at end of while loop to ensure messages display correctly.
+* Bug: Hangman graphic not displaying on game over.
+  * Fix: Add in additional stage of hangman graphic. Remove lives + 1 from script, set game over criteria back lives > 0. A more elgant fix for the problem above.
 
 
 ### **Resources**
