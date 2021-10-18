@@ -17,9 +17,7 @@ def initialise_game():
             return difficulty
 
         elif settings == "2":
-            options = True
-            difficulty = "set"
-            return difficulty          
+            options = True         
 
         elif settings == "3":
             options = True
@@ -33,9 +31,28 @@ def select_difficulty():
     """
     Let player set difficulty
     """
-    if difficulty == "default":
-        difficulty = 8
-        return difficulty
+    print("Select Difficulty")
+    print("Press E for Easy")
+    print("Press N for Normal")
+    print("Print H for Hard")
+    difficulty = False
+    while not difficulty:
+        options = input("\n").upper()
+        if options == "E":
+            difficulty = True
+            num_lives = 10
+            return num_of_lives
+        elif options == "N":
+            difficulty = True
+            num_lives = 7
+            return num_lives
+        elif options == "H":
+            difficulty = True
+            num_lives = 5
+            return num_lives
+        else:
+            print("Please select E, N or H to make your choice")
+
 
 
 def get_random_word():
