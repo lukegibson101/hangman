@@ -1,2 +1,2 @@
-### **Libraries**
- * [Random-Word](https://pypi.org/project/Random-Word/) - to generate a random word for the game. 
+### **Resources**
+ * [Random Word Generator](https://www.randomlists.com/random-words) - to generate a random word for the game. 
