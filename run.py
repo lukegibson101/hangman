@@ -21,7 +21,7 @@ def initialise_game():
 
         elif settings == "3":
             options = True
-            print("Game Rules")
+            game_rules()
 
         else:
             print("Please select 1, 2 or 3 to make your choice")
@@ -316,6 +316,19 @@ def hangman_lives(lives):
 
     return lives_left[lives]
 
+
+def game_rules():
+    print(
+        """
+        Guess the word by inputting letters.
+        If you get a letter wrong you will lose a life
+        and the hangman will begin building.
+        When you reach 0 lives you will be hanged
+        and it is game over!
+        """
+    )
+    main_menu = input("Press enter to return to the main menu")
+    initialise_game()
 
 
 def main():
