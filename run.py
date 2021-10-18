@@ -2,10 +2,16 @@ import random
 
 
 def initialise_game():
+    """
+    Option to begin game or select difficulty
+    """
     print ("Set options")
-    
+
 
 def select_difficulty():
+    """
+    Let player set difficulty
+    """
     print("Difficulty")
 
 
@@ -79,6 +85,85 @@ def play_game(word):
         print("Letters guessed: " + ", ".join(guesses))
 
     print("GAME OVER")
+
+
+def hangman_lives(lives):
+    lives_left = [
+        """
+        __________
+        |/
+        |
+        |
+        |
+        |
+        |____
+        """,
+        """
+        __________
+        |/
+        |
+        |
+        |
+        |
+        |____
+        """,
+        """
+        __________
+        |/
+        |
+        |
+        |
+        |
+        |____
+        """,
+        """
+        __________
+        |/
+        |
+        |
+        |
+        |
+        |____
+        """,
+        """
+        __________
+        |/
+        |
+        |
+        |
+        |
+        |____
+        """,
+        """
+        __________
+        |/
+        |
+        |
+        |
+        |
+        |____
+        """,
+
+        """
+        __________
+        |/
+        |
+        |
+        |
+        |
+        |____
+        """,
+        """
+        __________
+        |/
+        |
+        |
+        |
+        |
+        |____
+        """
+    ]
+
 
 
 def main():
