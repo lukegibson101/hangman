@@ -127,7 +127,7 @@ def play_game(word, num_lives):
             print(message)
             print(f"Lives: {lives}\n")
             print(f"The word to guess: " + " ".join(word_template) + "\n")
-            print("Letters guessed: " + ", ".join(guesses))
+            print("Letters guessed: " + ", ".join(sorted(guesses)))
 
     if game_over:
         print("Congratulations. {word} was the correct word!")
