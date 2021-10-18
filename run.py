@@ -1,6 +1,4 @@
-from random_word import RandomWords
+import random
 
-print("Hello World")
-r = RandomWords()
-
-print(r.get_random_word())
+random_line = random.choice(open("words.txt").read().split('\n'))
+print(random_line)
