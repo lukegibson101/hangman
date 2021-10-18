@@ -93,6 +93,10 @@ def play_game(word):
     else:
         hangman_wins()
 
+def restart_game():
+    restart = input("Would you like to play again? Y/N")
+    
+
 
 def player_wins():
     print(
@@ -111,7 +115,19 @@ def player_wins():
 
 
 def hangman_wins():
-    print("You lost!")
+    print(
+        """
+          ____
+         / ___| __ _ _ __ ___   ___
+        | |  _ / _` | '_ ` _ \\ / _ \\
+        | |_| | (_| | | | | | |  __/
+         \\____|\\__,_|_| |_| |_|\\___|
+         / _ \\__   _____ _ __| |
+        | | | \\ \\ / / _ \\ '__| |
+        | |_| |\\ V /  __/ |  |_|
+         \\___/  \\_/ \\___|_|  (_)
+        """
+        )
 
 
 def hangman_lives(lives):
@@ -239,6 +255,7 @@ def main():
     hangman_word = get_random_word()
     print(hangman_word)
     play_game(hangman_word)
+    restart_game()
 
 
 main()
