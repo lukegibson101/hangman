@@ -14,4 +14,5 @@
 
 
 ### **Resources**
- * [Random Word Generator](https://www.randomlists.com/random-words) - to generate a random list of 500 words for the game. 
+ * [Random Word Generator](https://www.randomlists.com/random-words) - to generate a random list of 500 words for the game.
+ * [Python Hang Man tutorial](https://github.com/kiteco/python-youtube-code/tree/master/build-hangman-in-python) - inspiration on how to build a hang man game. Whilst I have attempted to do my own thing, and greatly expand on the initial example, some code may be similar. 
