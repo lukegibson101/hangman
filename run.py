@@ -17,7 +17,7 @@ def initialise_game():
             return difficulty
 
         elif settings == "2":
-            options = True         
+            options = True 
 
         elif settings == "3":
             options = True
@@ -41,7 +41,7 @@ def select_difficulty():
         if options == "E":
             difficulty = True
             num_lives = 10
-            return num_of_lives
+            return num_lives
         elif options == "N":
             difficulty = True
             num_lives = 7
@@ -328,7 +328,7 @@ def game_rules():
         """
     )
     main_menu = input("Press enter to return to the main menu\n")
-    initialise_game()
+    main()
 
 
 def main():
