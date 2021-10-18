@@ -18,7 +18,7 @@ def play_game(word):
     lives = 10
     print("Lets play Hangman!")
     print(f"Lives: {lives}")
-    print(f"The word to guess: {word_template}")
+    print(f"The word to guess: " + " ".join(word_template))
     
     while not game_over:
         player_try = input("Guess a letter:\n").upper()
@@ -62,7 +62,7 @@ def play_game(word):
             continue
 
         print(f"Lives: {lives}")
-        print(f"The word to guess: {word_template}")
+        print(f"The word to guess: " + " ".join(word_template))
         print(guesses)
             
         
