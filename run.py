@@ -5,7 +5,26 @@ def initialise_game():
     """
     Option to begin game or select difficulty
     """
-    print ("Set options")
+    print ("Press 1 to play game")
+    print ("Press 2 to set difficulty")
+    print("Press 3 to view rules")
+    options = False
+    while not options:
+        settings = input("\n")
+        if settings == 1:
+            options = True
+            print("Play game")
+
+        elif settings == 2:
+            options = True
+            print("set difficulty")
+
+        elif settings == 3:
+            options = True
+            print("Game Rules")
+            
+        else:
+            print("Please select 1, 2 or 3 to make your choice")
 
 
 def select_difficulty():
@@ -282,8 +301,9 @@ def main():
     Runs the game
     """
     print("Welcome to Hangman!")
+    print(hangman_lives(0))
     initialise_game()
-    select_difficulty()
+    set_difficulty()
     hangman_word = get_random_word()
     print(hangman_word)
     play_game(hangman_word)
