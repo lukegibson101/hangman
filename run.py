@@ -130,9 +130,11 @@ def play_game(word, num_lives):
             print("Letters guessed: " + ", ".join(guesses))
 
     if game_over:
+        print("Congratulations. {word} was the correct word!")
         player_wins()
 
     else:
+        print(f"The correct word was {word}")
         hangman_wins()
 
     restart_game(num_lives)
