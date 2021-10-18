@@ -31,7 +31,8 @@ def select_difficulty():
     """
     Let player set difficulty
     """
-    print("Select Difficulty")
+    print("\n")
+    print("Select Difficulty\n")
     print("Press E for Easy")
     print("Press N for Normal")
     print("Print H for Hard")
@@ -51,7 +52,7 @@ def select_difficulty():
             num_lives = 5
             return num_lives
         else:
-            print("Please select E, N or H to make your choice")
+            print("\nPlease select E, N or H to make your choice")
 
 
 def get_random_word():
@@ -71,8 +72,9 @@ def play_game(word, num_lives):
     game_over = False
     guesses = []
     lives = num_lives
+    print("\n")
     print("Lets play Hangman!\n")
-    print(f"Lives: {lives}")
+    print(f"Lives: {lives}\n")
     print(f"The word to guess: " + " ".join(word_template) + "\n")
 
     while not game_over and lives > 0:
@@ -95,16 +97,16 @@ def play_game(word, num_lives):
                     )
 
                 elif player_try not in word:
-                    print(
-                        f"{(player_try)} is not in the word. You lose a life"
-                    )
+                    
+                    message = f"{(player_try)} is not in the word. You lose a life."
+                    
                     guesses.append(player_try)
                     lives -= 1
 
                 else:
-                    print(
-                        f"{player_try} is in the word. Well done!\n"
-                    )
+                    
+                    message = f"{player_try} is in the word. Well done!"
+                    
                     guesses.append(player_try)
                     word_template_list = list(word_template)
                     indices = [i for i, letter in enumerate(word)
@@ -116,13 +118,14 @@ def play_game(word, num_lives):
                         game_over = True
 
         except ValueError as e:
-            print(f"{e}, please try again.\n")
+            print(f"\n{e}, please try again.\n")
             continue
 
         print(hangman_lives(lives))
 
         if lives > 0:
-            print(f"Lives: {lives}")
+            print(message)
+            print(f"Lives: {lives}\n")
             print(f"The word to guess: " + " ".join(word_template) + "\n")
             print("Letters guessed: " + ", ".join(guesses))
 
@@ -152,6 +155,7 @@ def restart_game(num_lives):
 
             elif restart == "N":
                 game_restart = True
+                print("\n")
                 main()
 
             else:
@@ -331,6 +335,7 @@ def game_rules():
         """
     )
     main_menu = input("Press enter to return to the main menu\n")
+    print("\n")
     main()
 
 
