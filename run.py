@@ -51,12 +51,18 @@ def play_game(word):
                         f"{player_try} is in the word. Well done!\n"
                     )
                     guesses.append(player_try)
+                    word_template_list = list(word_template)
+                    indices = [i for i, letter in enumerate(word) if letter == player_try]
+                    for index in indices:
+                        word_template_list[index] = player_try
+                        word_template = "".join(word_template_list)
 
         except ValueError as e:
             print(f"{e}, please try again.\n")
             continue
 
         print(f"Lives: {lives}")
+        print(f"The word to guess: {word_template}")
         print(guesses)
             
         
