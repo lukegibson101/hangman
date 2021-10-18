@@ -9,6 +9,8 @@
   * Fix: Set lives to lives >=0 at end of while loop to ensure messages display correctly.
 * Bug: Hangman graphic not displaying on game over.
   * Fix: Add in additional stage of hangman graphic. Remove lives + 1 from script, set game over criteria back lives > 0. A more elgant fix for the problem above.
+* Bug: When selecting view rules. After returning to the main window, if you selected play game it would go to the difficulty menu
+  * Fix: Called main() in game rules rather that initialise_game()
 
 
 ### **Resources**
