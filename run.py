@@ -18,23 +18,21 @@ def play_game(word):
     game_over = False
     guesses = []
     lives = 10
-    print("Lets play Hangman!")
+    print("Lets play Hangman!\n")
     print(f"Lives: {lives}")
-    print(f"The word to guess: " + " ".join(word_template))
+    print(f"The word to guess: " + " ".join(word_template) + "\n")
 
     while not game_over and lives > 1:
         player_try = input("Guess a letter:\n").upper()
         try:
             if len(player_try) > 1:
                 raise ValueError(
-                    f"You can only guess 1 letter at a time, you guessed
-                    {len(player_try)} characters"
+                    f"You can only guess 1 letter at a time, you guessed {len(player_try)} characters"
                 )
 
             elif not player_try.isalpha():
                 raise ValueError(
-                    f"You can only guess letters, you guessed
-                    {(player_try)} which is not a letter"
+                    f"You can only guess letters, you guessed {(player_try)} which is not a letter"
                 )
 
             elif len(player_try) == 1 and player_try.isalpha():
