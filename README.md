@@ -12,6 +12,7 @@ Users can try to guess the word by inputting letters until they either guess the
    * User Goals
    * Using FlowCharts
  * [**Features**](#features)
+   * Future Features
  * [**Bugs**](#bugs)
    * Fixed Bugs
  * [**Resources**](#resources)
