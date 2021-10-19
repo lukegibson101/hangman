@@ -35,7 +35,7 @@ def select_difficulty():
     print("Select Difficulty\n")
     print("Press E for Easy")
     print("Press N for Normal")
-    print("Print H for Hard")
+    print("Press H for Hard")
     difficulty = False
     while not difficulty:
         options = input("\n").upper()
