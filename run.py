@@ -144,7 +144,7 @@ def play_game(word, num_lives):
             print("Letters guessed: " + ", ".join(sorted(guesses)))
 
     if game_over:
-        print(f"{text_colors.GREEN}Congratulations. {word} was the correct word!{text_colors.WHITE}")
+        print(f"\n{text_colors.GREEN}Congratulations. {word} was the correct word!{text_colors.WHITE}")
         player_wins()
 
     else:
@@ -161,7 +161,7 @@ def restart_game(num_lives):
     game_restart = False
 
     while not game_restart:
-        restart = input("Would you like to play again? {text_colors.PURPLE}Y/N{text_colors.WHITE}\n").upper()
+        restart = input(f"Would you like to play again? {text_colors.PURPLE}Y/N{text_colors.WHITE}\n").upper()
         try:
             if restart == "Y":
                 game_restart = True
@@ -188,7 +188,7 @@ def player_wins():
     Display You Win! graphic
     """
     print(
-        text_color.GREEN +
+        text_colors.GREEN +
         """
         __   __
         \\ \\ / /__  _   _
@@ -200,7 +200,7 @@ def player_wins():
          \\ V  V /| | | | |_|
           \\_/\\_/ |_|_| |_(_)
         """
-        + text_color.WHITE
+        + text_colors.WHITE
         )
 
 
@@ -221,7 +221,7 @@ def hangman_wins():
         | |_| |\\ V /  __/ |  |_|
          \\___/  \\_/ \\___|_|  (_)
         """
-        + text_color.WHITE
+        + text_colors.WHITE
         )
 
 
