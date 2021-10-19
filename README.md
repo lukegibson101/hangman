@@ -19,6 +19,7 @@ Users can try to guess the word by inputting letters until they either guess the
    * Fixed Bugs
    * Unfixed Bugs
  * [**Validators**](#validators)
+ * [**Deployment**](#deployment)
  * [**Credits**](#resources)
 
 ## **How to Play**
