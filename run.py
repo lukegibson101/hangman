@@ -69,7 +69,7 @@ def play_game(word, num_lives):
     Play the game.
     Sets initial lives and template for player to play on.
     When game over calls game over graphics and restart game functions
-    which gives player option to restart or go to main menu. 
+    which gives player option to restart or go to main menu.
     """
     word_template = "_" * len(word)
     game_over = False
