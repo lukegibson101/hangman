@@ -46,7 +46,7 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
 ![Amount of Letters](docs/read-me/amount-of-letters.png) 
 
- * Lives
+ * Lives with graphical representation
    * The user has a certain amount of lives before it is game over.
    * This can be seen whilst playing the game.
    * It is also represented by a image of the hangman being built as each life is lost.
@@ -68,6 +68,8 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
 
 
+
+
 ### **Bugs**
 
 ## **Fixed Bugs**
@@ -81,6 +83,9 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
   * Fix: Add in additional stage of hangman graphic. Remove lives + 1 from script, set game over criteria back lives > 0. A more elgant fix for the problem above.
 * Bug: When selecting view rules. After returning to the main window, if you selected play game it would go to the difficulty menu
   * Fix: Called main() in game rules rather that initialise_game()
+* Bug: Error message too long causing last letter to wrap to following line.
+  * Fix: Split up error string and put "Please try again" to a new line.
+
 
 
 ### **Resources**
