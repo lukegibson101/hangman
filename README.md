@@ -24,6 +24,14 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
  * The game should be fun to play
  * There should be a level of challenge for the user to keep them coming back
 
+ ### **Using FlowCharts**
+ During the planning process I thought about the basic steps needed to play a game of hangman and drew a basic flowchart to help guide my coding process whilst developing the game. 
+  * Where were inputs from the user needed?
+  * How would I deal with invalid inputs?
+  * How would I deal with incorrect tries?
+  * Were there any logic errors that could break the loop of the game?
+![Design FlowChart](docs/read-me/hangman-flowchart.png) 
+
  
 
 
