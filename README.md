@@ -54,6 +54,11 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
 ![Set difficulty](docs/read-me/difficulty.png)
 
+* View Game Rules
+
+![View game rules](docs/read-me/rules.png)
+
+
 
  * Random word generations
    * A function randomly generates a word from a list of 500 words.
