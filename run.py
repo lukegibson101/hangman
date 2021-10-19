@@ -1,5 +1,6 @@
 import random
 
+
 class text_colors:
     PURPLE = '\033[95m'
     BLUE = '\033[94m'
@@ -38,7 +39,7 @@ def initialise_game():
             game_rules()
 
         else:
-            print(text_colors.RED + "Please select 1, 2 or 3 to make your" +
+            print(text_colors.RED + "Please select 1, 2 or 3 to make your"
                   " choice" + text_colors.WHITE)
 
 
@@ -73,7 +74,7 @@ def select_difficulty():
             num_lives = 5
             return num_lives
         else:
-            print(text_colors.RED + "\nPlease select E, N or H to make your" +
+            print(text_colors.RED + "\nPlease select E, N or H to make your"
                   " choice" + text_colors.WHITE)
 
 
@@ -148,7 +149,8 @@ def play_game(word, num_lives):
                         game_over = True
 
         except ValueError as e:
-            print(f"{text_colors.RED}\n{e}.\nPlease try again.\n{text_colors.WHITE}")
+            print(f"{text_colors.RED}\n{e}.\nPlease try again.\n"
+                  f"{text_colors.WHITE}")
             continue
 
         print(hangman_lives(lives))
@@ -160,11 +162,13 @@ def play_game(word, num_lives):
             print("Letters guessed: " + ", ".join(sorted(guesses)))
 
     if game_over:
-        print(f"\n{text_colors.GREEN}Congratulations. {word} was the correct word!{text_colors.WHITE}")
+        print(f"\n{text_colors.GREEN}Congratulations. {word} was the correct"
+              f" word!{text_colors.WHITE}")
         player_wins()
 
     else:
-        print(f"{text_colors.RED}The correct word was {word}{text_colors.WHITE}")
+        print(f"{text_colors.RED}The correct word was {word}"
+              f"{text_colors.WHITE}")
         hangman_wins()
 
     restart_game(num_lives)
@@ -177,7 +181,8 @@ def restart_game(num_lives):
     game_restart = False
 
     while not game_restart:
-        restart = input(f"Would you like to play again? {text_colors.PURPLE}Y/N{text_colors.WHITE}\n").upper()
+        restart = input(f"Would you like to play again? {text_colors.PURPLE}"
+                        f"Y/N{text_colors.WHITE}\n").upper()
         try:
             if restart == "Y":
                 game_restart = True
@@ -196,7 +201,8 @@ def restart_game(num_lives):
                 )
 
         except ValueError as e:
-            print(f"{text_colors.RED}{e}.\nPlease try again.\n{text_colors.WHITE}")
+            print(f"{text_colors.RED}{e}.\nPlease try again.\n"
+                  f"{text_colors.WHITE}")
 
 
 def player_wins():
@@ -204,8 +210,7 @@ def player_wins():
     Display You Win! graphic
     """
     print(
-        text_colors.GREEN +
-        """
+        text_colors.GREEN + """
         __   __
         \\ \\ / /__  _   _
          \\ V / _ \\| | | |
@@ -215,8 +220,7 @@ def player_wins():
         \\ \\ /\\ / / | '_ \\| |
          \\ V  V /| | | | |_|
           \\_/\\_/ |_|_| |_(_)
-        """
-        + text_colors.WHITE
+        """ + text_colors.WHITE
         )
 
 
@@ -225,8 +229,7 @@ def hangman_wins():
     Display Game Over! graphic
     """
     print(
-        text_colors.RED +
-        """
+        text_colors.RED + """
           ____
          / ___| __ _ _ __ ___   ___
         | |  _ / _` | '_ ` _ \\ / _ \\
@@ -236,8 +239,7 @@ def hangman_wins():
         | | | \\ \\ / / _ \\ '__| |
         | |_| |\\ V /  __/ |  |_|
          \\___/  \\_/ \\___|_|  (_)
-        """
-        + text_colors.WHITE
+        """ + text_colors.WHITE
         )
 
 
@@ -384,7 +386,7 @@ def game_rules():
         """
     )
     main_menu = input(text_colors.PURPLE + "Press enter to return to the main"
-                      + " menu\n" + text_colors.WHITE)
+                      " menu\n" + text_colors.WHITE)
     print("\n")
     main()
 
