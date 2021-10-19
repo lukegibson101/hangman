@@ -16,9 +16,12 @@ def initialise_game():
     """
     Option to begin game or select difficulty
     """
-    print ("Press " + text_colors.PURPLE +  "1" + text_colors.WHITE + " to play game")
-    print ("Press " + text_colors.PURPLE +  "2" + text_colors.WHITE + " to set difficulty")
-    print("Press " + text_colors.PURPLE +  "3" + text_colors.WHITE + " to view rules")
+    print ("Press " + text_colors.PURPLE + "1" + text_colors.WHITE +
+           " to play game")
+    print ("Press " + text_colors.PURPLE + "2" + text_colors.WHITE +
+           " to set difficulty")
+    print("Press " + text_colors.PURPLE + "3" + text_colors.WHITE +
+          " to view rules")
     options = False
     while not options:
         settings = input("\n")
@@ -105,12 +108,14 @@ def play_game(word, num_lives):
         try:
             if len(player_try) > 1:
                 raise ValueError(
-                    f"You can only guess 1 letter at a time, you guessed {len(player_try)} characters"
+                    f"You can only guess 1 letter at a time, you guessed"
+                    f" {len(player_try)} characters"
                 )
 
             elif not player_try.isalpha():
                 raise ValueError(
-                    f"You can only guess letters, you guessed {(player_try)} which is not a letter"
+                    f"You can only guess letters, you guessed {(player_try)}"
+                    f" which is not a letter"
                 )
 
             elif len(player_try) == 1 and player_try.isalpha():
@@ -121,14 +126,16 @@ def play_game(word, num_lives):
 
                 elif player_try not in word:
 
-                    message = f"{text_colors.RED}{(player_try)} is not in the word. You lose a life.{text_colors.WHITE}"
+                    message = f"{text_colors.RED}{(player_try)} is not in the"\
+                              f" word. You lose a life.{text_colors.WHITE}"
 
                     guesses.append(player_try)
                     lives -= 1
 
                 else:
 
-                    message = f"{text_colors.GREEN}{player_try} is in the word. Well done!{text_colors.WHITE}"
+                    message = f"{text_colors.GREEN}{player_try} is in the"\
+                              f" word. Well done!{text_colors.WHITE}"
 
                     guesses.append(player_try)
                     word_template_list = list(word_template)
