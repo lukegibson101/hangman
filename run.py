@@ -121,7 +121,7 @@ def play_game(word, num_lives):
                         game_over = True
 
         except ValueError as e:
-            print(f"\n{e}, please try again.\n")
+            print(f"\n{e}.\nPlease try again.\n")
             continue
 
         print(hangman_lives(lives))
