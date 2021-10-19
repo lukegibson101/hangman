@@ -11,6 +11,7 @@ Users can try to guess the word by inputting letters until they either guess the
  * [**Planning Stage**](#planning-stage)
    * User Goals
    * Using FlowCharts
+ * [**Features**](#features)
  * [**Bugs**](#bugs)
    * Fixed Bugs
  * [**Resources**](#resources)
@@ -36,7 +37,25 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
 ![Design FlowChart](docs/read-me/hangman-flowchart.png) 
 
- 
+ ## **Features**
+
+ ### **Existing Features**
+ * Random word generations
+   * A function randomly generates a word from a list of 500 words.
+   * The player can not see what the word is but can see how many letters are in the word denoted by _ _ _ _ _ 
+
+![Amount of Letters](docs/read-me/amount-of-letters.png) 
+
+ * Lives
+   * The user has a certain amount of lives before it is game over.
+   * This can be seen whilst playing the game.
+   * It is also represented by a image of the hangman being built as each life is lost.
+   * You can get more lives by changing the difficulty.
+
+![Ammount of Lives](docs/read-me/hangman-graphic.png) 
+
+
+
 
 
 
