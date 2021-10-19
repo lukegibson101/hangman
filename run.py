@@ -133,7 +133,7 @@ def play_game(word, num_lives):
             print("Letters guessed: " + ", ".join(sorted(guesses)))
 
     if game_over:
-        print("Congratulations. {word} was the correct word!")
+        print(f"Congratulations. {word} was the correct word!")
         player_wins()
 
     else:
