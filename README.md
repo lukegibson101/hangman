@@ -22,7 +22,6 @@ Users can try to guess the word by inputting letters until they either guess the
  * [**Deployment**](#deployment)
  * [**Credits**](#credits)
 
-
 ## **How to Play**
 Players play Hangman101 by inputting commands into the mock terminal. The aim of the game is to guess the hidden word, represented with _ _ _ _ to show players how many letters are in the word. As the player corrrectly guesses letters, the _ are replaced with the correct letter. If a player puts in an incorrect command, an error message displays and the player is asked to resubmit their choice. 
 The game is over either when the player has correctly guessed the word or they have run out of lives. 
@@ -151,7 +150,6 @@ The project was deployed using Code Institutes mock terminal for Heroku.
   * Click "Connect" on selected repository. 
   * Either choose "Enable Automatic Deploys" or "Deploy Branch" in the manual deploy section. 
   * Heroku will now deploy the site.
-
 
 ## **Credits**
  * [Code Institute](https://codeinstitute.net/) for the mock terminal for the deploy to a live site.
