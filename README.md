@@ -13,6 +13,8 @@ Users can try to guess the word by inputting letters until they either guess the
    * Using FlowCharts
  * [**Features**](#features)
    * Future Features
+ * [**Testing**](#testing)
+ * [**Technologies Used**](#technologies-used)
  * [**Bugs**](#bugs)
    * Fixed Bugs
  * [**Resources**](#resources)
@@ -87,16 +89,30 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
 ![Error Meassage](docs/read-me/err-message.png) 
 
-## Future Features
+## **Future Features**
  * Ability to guess whole words if player thinks they know the answer
  * Implement a turn timer. On hard mode a player has X amount of seconds to make a turn or they lose a life.
  * Add a scoring system
  * Implement a true random word generator rather than using a set list. 
    * Generatd words would need to be within a certain range, with certain unique / less known words filtered out (except for hard mode, or even creat an ultra mode for this)
 
-### **Bugs**
+## **Testing**
+I have manually tested the project by doing the following: 
+* Tested python code through a PEP8 Linter using (http://pep8online.com/) and fixed any errors.
+* Manually tested user inputs by purposefully inputing incorrect data to confirm error messages were capturing wrong inputs.
+* Tested in the local terminal and on the mock terminal on the deployed site on Heroku.
 
-## **Fixed Bugs**
+## **Technologies Used**
+* Languages
+  * Python.
+* Libraries
+  * random to select a random word.
+* Other
+  * words.txt - A list of randomly generated words to be used to select a word to play, taken from (https://www.randomlists.com/random-words).
+
+## **Bugs**
+
+### **Fixed Bugs**
 * Bug: When implementing hangman graphics, lives left did not correspond to amount of stages left in hangman.
   * Fix: Due to lists iterating from 0, set lives displayed to user as lives + 1 and also adjusted the game over setting for lives >=0
 * Bug: When testing hangman graphics, the bottom graphic was shifted over to the right.
@@ -110,9 +126,10 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 * Bug: Error message too long causing last letter to wrap to following line.
   * Fix: Split up error string and put "Please try again" to a new line.
 
+## **Unfixed Bugs**
+* None currently known.
 
-
-### **Resources**
+## **Resources**
  * [Random Word Generator](https://www.randomlists.com/random-words) - to generate a random list of 500 words for the game.
  * [Python Hang Man tutorial](https://github.com/kiteco/python-youtube-code/tree/master/build-hangman-in-python) - inspiration on how to build a hang man game. Whilst I have attempted to do my own thing, and greatly expand on the initial example, some code may be similar. 
  * [ASCII Art Generator](https://patorjk.com/software/taag/#p=display&f=Standard&t=Hangman101) - for creating word art for game title and game over screens.
