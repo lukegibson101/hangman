@@ -82,6 +82,14 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
 ![Game Over!](docs/read-me/game-over.png) 
 
+* Checks for invalid inputs
+  * For all user inputs, checks are run to ensure there are no invalid inputs submitted.
+  * For any invalid submissions, a tailored error message is displayed and the user is prompted to input their selection again.
+
+![Error Meassage](docs/read-me/err-message.png) 
+
+
+
 
 
 
