@@ -9,10 +9,10 @@ Users can try to guess the word by inputting letters until they either guess the
 ## **Table of Contents**
  * [**How to Play**](#how-to-play)
  * [**Planning Stage**](#planning-stage)
-  * User Goals
-  * Using FlowCharts
+   * User Goals
+   * Using FlowCharts
  * [**Bugs**](#bugs)
-  * Fixed Bugs
+   * Fixed Bugs
  * [**Resources**](#resources)
 
 ## **How to Play**
@@ -33,7 +33,7 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
   * How would I deal with invalid inputs?
   * How would I deal with incorrect tries?
   * Were there any logic errors that could break the loop of the game?
-  
+
 ![Design FlowChart](docs/read-me/hangman-flowchart.png) 
 
  
