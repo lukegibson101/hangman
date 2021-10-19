@@ -135,6 +135,22 @@ I have manually tested the project by doing the following:
 * PEP8
   * No errors returned from (http://pep8online.com/).
 
+## **Deployment**
+The project was deployed using Code Institutes mock terminal for Heroku. 
+
+* Steps to deploy:
+  * Fork or clone this repository.
+  * Create a new app in [Heroku](https://dashboard.heroku.com/apps).
+  * Select "New" and "Create new app".
+  * Name the new app and click "Create new app".
+  * In "Settings" select "BuildPack" and select Python and Node.js. (Python must be at the top of the list).
+  * Whilst still in "Settings", click "Reveal Config Vars" and input the folloing. KEY: PORT, VALUE: 8000. Nothing else is needed here as this project does not have any sensitive files.
+  * Click on "Deploy" and select your deploy method and repository.
+  * Click "Connect" on selected repository. 
+  * Either choose "Enable Automatic Deploys" or "Deploy Branch" in the manual deploy section. 
+  * Heroku will now deploy the site.
+
+
 ## **Credits**
  * [Code Institute](https://codeinstitute.net/) for the mock terminal for the deploy to a live site.
  * [Random Word Generator](https://www.randomlists.com/random-words) - to generate a random list of 500 words for the game.
