@@ -58,8 +58,6 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
 ![View game rules](docs/read-me/rules.png)
 
-
-
  * Random word generations
    * A function randomly generates a word from a list of 500 words.
    * The player can not see what the word is but can see how many letters are in the word denoted by _ _ _ _ _ 
@@ -88,15 +86,12 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
 ![Error Meassage](docs/read-me/err-message.png) 
 
-
-
-
-
-
-
-
-
-
+## Future Features
+ * Ability to guess whole words if player thinks they know the answer
+ * Implement a turn timer. On hard mode a player has X amount of seconds to make a turn or they lose a life.
+ * Add a scoring system
+ * Implement a true random word generator rather than using a set list. 
+   * Generatd words would need to be within a certain range, with certain unique / less known words filtered out (except for hard mode, or even creat an ultra mode for this)
 
 ### **Bugs**
 
