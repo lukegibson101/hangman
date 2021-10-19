@@ -1,3 +1,12 @@
+# **Hangman101**
+Hangman101 is a Python terminal game, which runs on the Code Institute mock terminal on Heroku.
+Users can try to guess the word by inputting letters until they either guess the word or it is game over. 
+
+[Hangman101](https://hangman101.herokuapp.com/) - You can view the live site here. 
+
+
+
+
 ### **Bugs**
 
 ## **Fixed Bugs**
