@@ -33,6 +33,7 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
   * How would I deal with invalid inputs?
   * How would I deal with incorrect tries?
   * Were there any logic errors that could break the loop of the game?
+  
 ![Design FlowChart](docs/read-me/hangman-flowchart.png) 
 
  
