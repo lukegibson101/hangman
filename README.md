@@ -9,7 +9,10 @@ Users can try to guess the word by inputting letters until they either guess the
 ## **Table of Contents**
  * [**How to Play**](#how-to-play)
  * [**Planning Stage**](#planning-stage)
+  * User Goals
+  * Using FlowCharts
  * [**Bugs**](#bugs)
+  * Fixed Bugs
  * [**Resources**](#resources)
 
 ## **How to Play**
