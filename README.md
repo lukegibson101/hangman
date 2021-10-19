@@ -54,6 +54,15 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
 ![Ammount of Lives](docs/read-me/hangman-graphic.png) 
 
+* Game Over Screens
+ * A custom screen for winning the game and for game over. 
+ * Users can choose whether to restart the game or go back to the main menu.
+
+![You Win!](docs/read-me/you-win.png) 
+
+![Game Over!](docs/read-me/game-over.png) 
+
+
 
 
 
