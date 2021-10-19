@@ -18,6 +18,7 @@ Users can try to guess the word by inputting letters until they either guess the
  * [**Bugs**](#bugs)
    * Fixed Bugs
    * Unfixed Bugs
+ * [**Validators**](#validators)
  * [**Resources**](#resources)
 
 ## **How to Play**
@@ -127,8 +128,12 @@ I have manually tested the project by doing the following:
 * Bug: Error message too long causing last letter to wrap to following line.
   * Fix: Split up error string and put "Please try again" to a new line.
 
-## **Unfixed Bugs**
+### **Unfixed Bugs**
 * None currently known.
+
+## **Validators**
+* PEP8
+  * No errors returned from (http://pep8online.com/).
 
 ## **Resources**
  * [Random Word Generator](https://www.randomlists.com/random-words) - to generate a random list of 500 words for the game.
