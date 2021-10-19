@@ -19,7 +19,7 @@ Users can try to guess the word by inputting letters until they either guess the
    * Fixed Bugs
    * Unfixed Bugs
  * [**Validators**](#validators)
- * [**Resources**](#resources)
+ * [**Credits**](#resources)
 
 ## **How to Play**
 Players play Hangman101 by inputting commands into the mock terminal. The aim of the game is to guess the hidden word, represented with _ _ _ _ to show players how many letters are in the word. As the player corrrectly guesses letters, the _ are replaced with the correct letter. If a player puts in an incorrect command, an error message displays and the player is asked to resubmit their choice. 
@@ -135,7 +135,8 @@ I have manually tested the project by doing the following:
 * PEP8
   * No errors returned from (http://pep8online.com/).
 
-## **Resources**
+## **Credits**
+ * [Code Institute](https://codeinstitute.net/) for the mock terminal for the deploy to a live site.
  * [Random Word Generator](https://www.randomlists.com/random-words) - to generate a random list of 500 words for the game.
  * [Python Hang Man tutorial](https://github.com/kiteco/python-youtube-code/tree/master/build-hangman-in-python) - inspiration on how to build a hang man game. Whilst I have attempted to do my own thing, and greatly expand on the initial example, some code may be similar. 
  * [ASCII Art Generator](https://patorjk.com/software/taag/#p=display&f=Standard&t=Hangman101) - for creating word art for game title and game over screens.
