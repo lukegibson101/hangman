@@ -4,6 +4,14 @@ Users can try to guess the word by inputting letters until they either guess the
 
 [Hangman101](https://hangman101.herokuapp.com/) - You can view the live site here. 
 
+![Am I Responsive?](docs/read-me/am-i-responsive.png) 
+
+## **Table of Contents**
+ * [**Planning Stage**](#planning-stage)
+ * [**Bugs**](#bugs)
+ * [**Resources**](#resources)
+
+## **Planning Stage**
 
 
 
