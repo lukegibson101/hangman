@@ -20,7 +20,8 @@ Users can try to guess the word by inputting letters until they either guess the
    * Unfixed Bugs
  * [**Validators**](#validators)
  * [**Deployment**](#deployment)
- * [**Credits**](#resources)
+ * [**Credits**](#credits)
+ 
 
 ## **How to Play**
 Players play Hangman101 by inputting commands into the mock terminal. The aim of the game is to guess the hidden word, represented with _ _ _ _ to show players how many letters are in the word. As the player corrrectly guesses letters, the _ are replaced with the correct letter. If a player puts in an incorrect command, an error message displays and the player is asked to resubmit their choice. 
