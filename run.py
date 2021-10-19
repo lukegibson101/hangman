@@ -35,7 +35,8 @@ def initialise_game():
             game_rules()
 
         else:
-            print(text_colors.RED + "Please select 1, 2 or 3 to make your choice" + text_colors.WHITE)
+            print(text_colors.RED + "Please select 1, 2 or 3 to make your" +
+                  " choice" + text_colors.WHITE)
 
 
 def select_difficulty():
@@ -44,9 +45,15 @@ def select_difficulty():
     """
     print("\n")
     print("Select Difficulty\n")
-    print("Press " + text_colors.PURPLE +  "E" + text_colors.WHITE + " for Easy")
-    print("Press " + text_colors.PURPLE +  "N" + text_colors.WHITE + " for Normal")
-    print("Press " + text_colors.PURPLE +  "H" + text_colors.WHITE + " for Hard")
+    print(
+        "Press " + text_colors.PURPLE + "E" + text_colors.WHITE + " for Easy"
+        )
+    print(
+        "Press " + text_colors.PURPLE + "N" + text_colors.WHITE + " for Normal"
+        )
+    print(
+        "Press " + text_colors.PURPLE + "H" + text_colors.WHITE + " for Hard"
+        )
     difficulty = False
     while not difficulty:
         options = input("\n").upper()
@@ -63,7 +70,8 @@ def select_difficulty():
             num_lives = 5
             return num_lives
         else:
-            print(text_colors.RED + "\nPlease select E, N or H to make your choice" + text_colors.WHITE)
+            print(text_colors.RED + "\nPlease select E, N or H to make your" +
+                  " choice" + text_colors.WHITE)
 
 
 def get_random_word():
@@ -92,7 +100,8 @@ def play_game(word, num_lives):
     print(f"The word to guess: " + " ".join(word_template) + "\n")
 
     while not game_over and lives > 0:
-        player_try = input(text_colors.PURPLE + "Guess a letter:\n" + text_colors.WHITE).upper()
+        player_try = input(text_colors.PURPLE + "Guess a letter:\n" +
+                           text_colors.WHITE).upper()
         try:
             if len(player_try) > 1:
                 raise ValueError(
@@ -367,7 +376,8 @@ def game_rules():
         and it is game over!
         """
     )
-    main_menu = input("Press enter to return to the main menu\n")
+    main_menu = input(text_colors.PURPLE + "Press enter to return to the main"
+                      + " menu\n" + text_colors.WHITE)
     print("\n")
     main()
 
