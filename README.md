@@ -17,6 +17,7 @@ Users can try to guess the word by inputting letters until they either guess the
  * [**Technologies Used**](#technologies-used)
  * [**Bugs**](#bugs)
    * Fixed Bugs
+   * Unfixed Bugs
  * [**Resources**](#resources)
 
 ## **How to Play**
