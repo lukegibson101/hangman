@@ -8,12 +8,23 @@ Users can try to guess the word by inputting letters until they either guess the
 
 ## **Table of Contents**
  * [**How to Play**](#how-to-play)
+ * [**Planning Stage**](#planning-stage)
  * [**Bugs**](#bugs)
  * [**Resources**](#resources)
 
 ## **How to Play**
 Players play Hangman101 by inputting commands into the mock terminal. The aim of the game is to guess the hidden word, represented with _ _ _ _ to show players how many letters are in the word. As the player corrrectly guesses letters, the _ are replaced with the correct letter. If a player puts in an incorrect command, an error message displays and the player is asked to resubmit their choice. 
 The game is over either when the player has correctly guessed the word or they have run out of lives. 
+
+## **Planning Stage**
+
+### **User Goals**
+To build a terminal version of Hangman for a developer to use in an IDE environment whilst taking a break from coding.
+ * The game should be easy to play
+ * The game should be fun to play
+ * There should be a level of challenge for the user to keep them coming back
+
+ 
 
 
 
