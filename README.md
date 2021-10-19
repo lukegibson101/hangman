@@ -40,6 +40,15 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
  ## **Features**
 
  ### **Existing Features**
+* Game Menu
+  * Can select to start game
+  * Can change difficulty
+  * Can view how to play the game
+
+![Main menu](docs/read-me/main-menu.png)
+
+
+
  * Random word generations
    * A function randomly generates a word from a list of 500 words.
    * The player can not see what the word is but can see how many letters are in the word denoted by _ _ _ _ _ 
