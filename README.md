@@ -21,7 +21,7 @@ Users can try to guess the word by inputting letters until they either guess the
  * [**Validators**](#validators)
  * [**Deployment**](#deployment)
  * [**Credits**](#credits)
- 
+
 
 ## **How to Play**
 Players play Hangman101 by inputting commands into the mock terminal. The aim of the game is to guess the hidden word, represented with _ _ _ _ to show players how many letters are in the word. As the player corrrectly guesses letters, the _ are replaced with the correct letter. If a player puts in an incorrect command, an error message displays and the player is asked to resubmit their choice. 
@@ -31,9 +31,9 @@ The game is over either when the player has correctly guessed the word or they h
 
 ### **User Goals**
 To build a terminal version of Hangman for a developer to use in an IDE environment whilst taking a break from coding.
- * The game should be easy to play
- * The game should be fun to play
- * There should be a level of challenge for the user to keep them coming back
+ * The game should be easy to play.
+ * The game should be fun to play.
+ * There should be a level of challenge for the user to keep them coming back.
 
  ### **Using FlowCharts**
  During the planning process I thought about the basic steps needed to play a game of hangman and drew a basic flowchart to help guide my coding process whilst developing the game. 
@@ -55,7 +55,7 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 ![Main menu](docs/read-me/main-menu.png)
 
 * Set Difficulty
-  * Easy - 10 lives
+  * Easy = 10 lives
   * Normal = 7 lives
   * Hard = 5 lives
 
@@ -79,7 +79,7 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
 ![Ammount of Lives](docs/read-me/hangman-graphic.png) 
 
-* Game Over Screens
+* Game Over Screens.
  * A custom screen for winning the game and for game over. 
  * Users can choose whether to restart the game or go back to the main menu.
 
@@ -87,18 +87,18 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
 ![Game Over!](docs/read-me/game-over.png) 
 
-* Checks for invalid inputs
+* Checks for invalid inputs.
   * For all user inputs, checks are run to ensure there are no invalid inputs submitted.
   * For any invalid submissions, a tailored error message is displayed and the user is prompted to input their selection again.
 
 ![Error Meassage](docs/read-me/err-message.png) 
 
 ## **Future Features**
- * Ability to guess whole words if player thinks they know the answer
+ * Ability to guess whole words if player thinks they know the answer.
  * Implement a turn timer. On hard mode a player has X amount of seconds to make a turn or they lose a life.
- * Add a scoring system
+ * Add a scoring system.
  * Implement a true random word generator rather than using a set list. 
-   * Generatd words would need to be within a certain range, with certain unique / less known words filtered out (except for hard mode, or even creat an ultra mode for this)
+   * Generated words would need to be within a certain range, with certain unique / less known words filtered out (except for hard mode, or even create an ultra mode for this).
 
 ## **Testing**
 I have manually tested the project by doing the following: 
