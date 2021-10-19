@@ -169,7 +169,7 @@ def restart_game(num_lives):
                 )
 
         except ValueError as e:
-            print(f"{e}, please try again.\n")
+            print(f"{e}.\nPlease try again.\n")
 
 
 def player_wins():
