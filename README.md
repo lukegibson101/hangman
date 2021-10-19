@@ -47,6 +47,12 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 
 ![Main menu](docs/read-me/main-menu.png)
 
+* Set Difficulty
+  * Easy - 10 lives
+  * Normal = 7 lives
+  * Hard = 5 lives
+
+![Set difficulty](docs/read-me/difficulty.png)
 
 
  * Random word generations
