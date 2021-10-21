@@ -2,7 +2,7 @@ import random
 
 
 class text_colors:
-    YELLOW = '\033[36m'
+    YELLOW = '\033[38;5;159m'
     BLUE = '\033[94m'
     GREEN = '\033[92m'
     RED = '\033[91m'
@@ -146,7 +146,7 @@ def play_game(word, num_lives):
                         game_over = True
 
         except ValueError as e:
-            print(f"{text_colors.RED}\n{e}.\nPlease try again.\n"
+            print(f"{text_colors.RED}{e}.\nPlease try again.\n"
                   f"{text_colors.WHITE}")
             continue
 
@@ -156,7 +156,7 @@ def play_game(word, num_lives):
             print(message)
             print(f"Lives: {lives}\n")
             print(f"The word to guess: " + " ".join(word_template) + "\n")
-            print("Letters guessed: " + ", ".join(sorted(guesses)))
+            print("Letters guessed: " + ", ".join(sorted(guesses)) + "\n")
 
     if game_over:
         print(f"\n{text_colors.GREEN}Congratulations. {word} was the correct"
