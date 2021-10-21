@@ -93,7 +93,7 @@ To build a terminal version of Hangman for a developer to use in an IDE environm
 ![Error Meassage](docs/read-me/err-message.png) 
 
 * Color Scheme implemented to add some vibrancy to the game.
-  * Purple for inputs.
+  * Blue for inputs.
   * Red for errors, incorrect guesses and game over.
   * Green for correct guesses and victory.
 
