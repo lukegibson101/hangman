@@ -2,8 +2,7 @@ import random
 
 
 class text_colors:
-    YELLOW = '\033[38;5;159m'
-    BLUE = '\033[94m'
+    BLUE = '\033[38;5;159m'
     GREEN = '\033[92m'
     RED = '\033[91m'
     WHITE = '\033[0m'
@@ -14,11 +13,11 @@ def initialise_game():
     """
     Option to begin game or select difficulty
     """
-    print ("Press " + text_colors.YELLOW + "1" + text_colors.WHITE +
+    print ("Press " + text_colors.BLUE + "1" + text_colors.WHITE +
            " to play game")
-    print ("Press " + text_colors.YELLOW + "2" + text_colors.WHITE +
+    print ("Press " + text_colors.BLUE + "2" + text_colors.WHITE +
            " to set difficulty")
-    print("Press " + text_colors.YELLOW + "3" + text_colors.WHITE +
+    print("Press " + text_colors.BLUE + "3" + text_colors.WHITE +
           " to view rules")
     options = False
     while not options:
@@ -47,13 +46,13 @@ def select_difficulty():
     print("\n")
     print("Select Difficulty\n")
     print(
-        "Press " + text_colors.YELLOW + "E" + text_colors.WHITE + " for Easy"
+        "Press " + text_colors.BLUE + "E" + text_colors.WHITE + " for Easy"
         )
     print(
-        "Press " + text_colors.YELLOW + "N" + text_colors.WHITE + " for Normal"
+        "Press " + text_colors.BLUE + "N" + text_colors.WHITE + " for Normal"
         )
     print(
-        "Press " + text_colors.YELLOW + "H" + text_colors.WHITE + " for Hard"
+        "Press " + text_colors.BLUE + "H" + text_colors.WHITE + " for Hard"
         )
     difficulty = False
     while not difficulty:
@@ -101,7 +100,7 @@ def play_game(word, num_lives):
     print(f"The word to guess: " + " ".join(word_template) + "\n")
 
     while not game_over and lives > 0:
-        player_try = input(text_colors.YELLOW + "Guess a letter:\n" +
+        player_try = input(text_colors.BLUE + "Guess a letter:\n" +
                            text_colors.WHITE).upper()
         try:
             if len(player_try) > 1:
@@ -178,7 +177,7 @@ def restart_game(num_lives):
     game_restart = False
 
     while not game_restart:
-        restart = input(f"Would you like to play again? {text_colors.YELLOW}"
+        restart = input(f"Would you like to play again? {text_colors.BLUE}"
                         f"Y/N{text_colors.WHITE}\n").upper()
         try:
             if restart == "Y":
@@ -382,7 +381,7 @@ def game_rules():
         and it is game over!
         """
     )
-    main_menu = input(text_colors.YELLOW + "Press enter to return to the main"
+    main_menu = input(text_colors.BLUE + "Press enter to return to the main"
                       " menu\n" + text_colors.WHITE)
     print("\n")
     main()
