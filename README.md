@@ -153,7 +153,8 @@ The project was deployed using Code Institutes mock terminal for Heroku.
 
 * Steps to deploy:
   * Fork or clone this repository.
-  * Ensure the Procfile is in place. 
+  * Ensure the Procfile is in place.
+  * requirements.txt can be left empty as this project does not use any external libraries. 
   * Create a new app in [Heroku](https://dashboard.heroku.com/apps).
   * Select "New" and "Create new app".
   * Name the new app and click "Create new app".
