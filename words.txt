@@ -494,3 +494,7 @@ milk
 attempt
 argument
 pocket
+python
+coding
+development
+mentor
