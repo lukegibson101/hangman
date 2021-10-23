@@ -13,15 +13,15 @@ def initialise_game():
     """
     Option to begin game or select difficulty
     """
-    print ("Press " + text_colors.BLUE + "1" + text_colors.WHITE +
+    print (" Press " + text_colors.BLUE + "1" + text_colors.WHITE +
            " to play game")
-    print ("Press " + text_colors.BLUE + "2" + text_colors.WHITE +
+    print (" Press " + text_colors.BLUE + "2" + text_colors.WHITE +
            " to set difficulty")
-    print("Press " + text_colors.BLUE + "3" + text_colors.WHITE +
+    print(" Press " + text_colors.BLUE + "3" + text_colors.WHITE +
           " to view rules")
     options = False
     while not options:
-        settings = input("\n")
+        settings = input("\n ")
         if settings == "1":
             options = True
             difficulty = "default"
@@ -35,7 +35,7 @@ def initialise_game():
             game_rules()
 
         else:
-            print(text_colors.RED + "Please select 1, 2 or 3 to make your"
+            print(text_colors.RED + " Please select 1, 2 or 3 to make your"
                   " choice" + text_colors.WHITE)
 
 
@@ -44,19 +44,19 @@ def select_difficulty():
     Let player set difficulty
     """
     print("\n")
-    print("Select Difficulty\n")
+    print(" Select Difficulty\n")
     print(
-        "Press " + text_colors.BLUE + "E" + text_colors.WHITE + " for Easy"
+        " Press " + text_colors.BLUE + "E" + text_colors.WHITE + " for Easy"
         )
     print(
-        "Press " + text_colors.BLUE + "N" + text_colors.WHITE + " for Normal"
+        " Press " + text_colors.BLUE + "N" + text_colors.WHITE + " for Normal"
         )
     print(
-        "Press " + text_colors.BLUE + "H" + text_colors.WHITE + " for Hard"
+        " Press " + text_colors.BLUE + "H" + text_colors.WHITE + " for Hard"
         )
     difficulty = False
     while not difficulty:
-        options = input("\n").upper()
+        options = input("\n ").upper()
         if options == "E":
             difficulty = True
             num_lives = 10
@@ -70,7 +70,7 @@ def select_difficulty():
             num_lives = 5
             return num_lives
         else:
-            print(text_colors.RED + "\nPlease select E, N or H to make your"
+            print(text_colors.RED + "\n Please select E, N or H to make your"
                   " choice" + text_colors.WHITE)
 
 
@@ -95,35 +95,35 @@ def play_game(word, num_lives):
     guesses = []
     lives = num_lives
     print("\n")
-    print(text_colors.BOLD + "Lets play Hangman!\n" + text_colors.WHITE)
-    print(f"Lives: {lives}\n")
-    print(f"The word to guess: " + " ".join(word_template) + "\n")
+    print(text_colors.BOLD + " Lets play Hangman!\n" + text_colors.WHITE)
+    print(f" Lives: {lives}\n")
+    print(f" The word to guess: " + " ".join(word_template) + "\n")
 
     while not game_over and lives > 0:
-        player_try = input(text_colors.BLUE + "Guess a letter:\n" +
+        player_try = input(text_colors.BLUE + " Guess a letter:\n " +
                            text_colors.WHITE).upper()
         try:
             if len(player_try) > 1:
                 raise ValueError(
-                    f"You can only guess 1 letter at a time, you guessed"
+                    f" You can only guess 1 letter at a time, you guessed"
                     f" {len(player_try)} characters"
                 )
 
             elif not player_try.isalpha():
                 raise ValueError(
-                    f"You can only guess letters, you guessed {(player_try)}"
+                    f" You can only guess letters, you guessed {(player_try)}"
                     f" which is not a letter"
                 )
 
             elif len(player_try) == 1 and player_try.isalpha():
                 if player_try in guesses:
                     raise ValueError(
-                        f"You have already guessed {(player_try)}"
+                        f" You have already guessed {(player_try)}"
                     )
 
                 elif player_try not in word:
 
-                    message = f"{text_colors.RED}{(player_try)} is not in the"\
+                    message = f" {text_colors.RED}{(player_try)} is not in the"\
                               f" word. You lose a life.{text_colors.WHITE}"
 
                     guesses.append(player_try)
@@ -131,7 +131,7 @@ def play_game(word, num_lives):
 
                 else:
 
-                    message = f"{text_colors.GREEN}{player_try} is in the"\
+                    message = f" {text_colors.GREEN}{player_try} is in the"\
                               f" word. Well done!{text_colors.WHITE}"
 
                     guesses.append(player_try)
@@ -145,7 +145,7 @@ def play_game(word, num_lives):
                         game_over = True
 
         except ValueError as e:
-            print(f"{text_colors.RED}{e}.\nPlease try again.\n"
+            print(f"{text_colors.RED}{e}.\n Please try again.\n"
                   f"{text_colors.WHITE}")
             continue
 
@@ -153,9 +153,9 @@ def play_game(word, num_lives):
 
         if lives > 0:
             print(message)
-            print(f"Lives: {lives}\n")
-            print(f"The word to guess: " + " ".join(word_template) + "\n")
-            print("Letters guessed: " + ", ".join(sorted(guesses)) + "\n")
+            print(f" Lives: {lives}\n")
+            print(f" The word to guess: " + " ".join(word_template) + "\n")
+            print(" Letters guessed: " + ", ".join(sorted(guesses)) + "\n")
 
     if game_over:
         print(f"\n{text_colors.GREEN}Congratulations. {word} was the correct"
@@ -163,7 +163,7 @@ def play_game(word, num_lives):
         player_wins()
 
     else:
-        print(f"{text_colors.RED}The correct word was {word}"
+        print(f" {text_colors.RED}The correct word was {word}"
               f"{text_colors.WHITE}")
         hangman_wins()
 
@@ -177,8 +177,8 @@ def restart_game(num_lives):
     game_restart = False
 
     while not game_restart:
-        restart = input(f"Would you like to play again? {text_colors.BLUE}"
-                        f"Y/N{text_colors.WHITE}\n").upper()
+        restart = input(f" Would you like to play again? {text_colors.BLUE}"
+                        f"Y/N{text_colors.WHITE}\n ").upper()
         try:
             if restart == "Y":
                 game_restart = True
@@ -193,11 +193,11 @@ def restart_game(num_lives):
 
             else:
                 raise ValueError(
-                    f"You must type in Y or N. You typed {(restart)}"
+                    f" You must type in Y or N. You typed {(restart)}"
                 )
 
         except ValueError as e:
-            print(f"{text_colors.RED}{e}.\nPlease try again.\n"
+            print(f"{text_colors.RED}{e}.\n Please try again.\n"
                   f"{text_colors.WHITE}")
 
 
@@ -381,8 +381,8 @@ def game_rules():
         and it is game over!
         """
     )
-    main_menu = input(text_colors.BLUE + "Press enter to return to the main"
-                      " menu\n" + text_colors.WHITE)
+    main_menu = input(text_colors.BLUE + " Press enter to return to the main"
+                      " menu\n " + text_colors.WHITE)
     print("\n")
     main()
 
