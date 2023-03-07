@@ -94,7 +94,7 @@ def get_random_word(game_mode):
     return random_word.upper()
 
 
-def play_game(word, num_lives):
+def play_game(word, num_lives, mode):
     """
     Play the game.
     Sets initial lives and template for player to play on.
@@ -178,10 +178,10 @@ def play_game(word, num_lives):
               f"{text_colors.WHITE}")
         hangman_wins()
 
-    restart_game(num_lives)
+    restart_game(num_lives, mode)
 
 
-def restart_game(num_lives):
+def restart_game(num_lives, mode):
     """
     Gives player option to restart, otherwise returns to title screen
     """
@@ -193,9 +193,9 @@ def restart_game(num_lives):
         try:
             if restart == "Y":
                 game_restart = True
-                hangman_word = get_random_word(difficulty)
+                hangman_word = get_random_word(mode)
 
-                play_game(hangman_word, num_lives)
+                play_game(hangman_word, num_lives, mode)
 
             elif restart == "N":
                 game_restart = True
@@ -405,13 +405,13 @@ def main():
     hangman_title()
     print(hangman_lives(0))
     difficulty = initialise_game()
-    if difficulty == "default" || difficulty == 'nourish':
+    if difficulty == "default" or difficulty == 'nourish':
         num_lives = 7
     else:
         num_lives = select_difficulty()
 
     hangman_word = get_random_word(difficulty)
-    play_game(hangman_word, num_lives)
+    play_game(hangman_word, num_lives, difficulty)
 
 
 main()
