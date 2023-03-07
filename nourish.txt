@@ -1,0 +1,43 @@
+nourish
+vue
+angular
+ruby
+rails
+gunicorn
+aws
+services
+integrations
+actions
+care home
+staging
+production
+lambda
+dynamo db
+peanut butter
+cat
+jira
+ready for qa
+deployed
+semaphore
+remote working
+python
+libraries
+analytics
+provided services
+sticky interactions
+interactions
+product
+testing
+jobs
+carers
+clients
+sprint
+cards
+zoho
+html
+support
+marketing
+sales
+stand up
+retro
+show and tell

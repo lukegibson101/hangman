@@ -19,6 +19,8 @@ def initialise_game():
            " to set difficulty")
     print(" Press " + text_colors.BLUE + "3" + text_colors.WHITE +
           " to view rules")
+    print(" Press " + text_colors.BLUE + "4" + text_colors.WHITE +
+    " to play Nourish Hangman")
     options = False
     while not options:
         settings = input("\n ")
@@ -33,6 +35,11 @@ def initialise_game():
         elif settings == "3":
             options = True
             game_rules()
+
+        elif settings == "4":
+            options = True
+            difficulty = "nourish"
+            return difficulty
 
         else:
             print(text_colors.RED + " Please select 1, 2 or 3 to make your"
@@ -74,12 +81,16 @@ def select_difficulty():
                   " choice" + text_colors.WHITE)
 
 
-def get_random_word():
+def get_random_word(game_mode):
     """
     Picks a random word from words.txt to be used as the word the player has
     to guess.
     """
-    random_word = random.choice(open("words.txt", "r").read().split('\n'))
+    if game_mode == 'nourish':
+        random_word = random.choice(open("nourish.txt", "r").read().split('\n'))
+    else:
+        random_word = random.choice(open("words.txt", "r").read().split('\n'))
+    
     return random_word.upper()
 
 
@@ -182,7 +193,7 @@ def restart_game(num_lives):
         try:
             if restart == "Y":
                 game_restart = True
-                hangman_word = get_random_word()
+                hangman_word = get_random_word(difficulty)
 
                 play_game(hangman_word, num_lives)
 
@@ -394,12 +405,12 @@ def main():
     hangman_title()
     print(hangman_lives(0))
     difficulty = initialise_game()
-    if difficulty == "default":
+    if difficulty == "default" || difficulty == 'nourish':
         num_lives = 7
     else:
         num_lives = select_difficulty()
 
-    hangman_word = get_random_word()
+    hangman_word = get_random_word(difficulty)
     play_game(hangman_word, num_lives)
 
 
