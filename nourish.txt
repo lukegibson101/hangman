@@ -8,23 +8,20 @@ aws
 services
 integrations
 actions
-care home
+organisation
 staging
 production
 lambda
-dynamo db
-peanut butter
+dynamodb
 cat
 jira
-ready for qa
 deployed
 semaphore
-remote working
+remote
 python
 libraries
 analytics
-provided services
-sticky interactions
+sticky
 interactions
 product
 testing
@@ -38,6 +35,5 @@ html
 support
 marketing
 sales
-stand up
 retro
-show and tell
+meetings
