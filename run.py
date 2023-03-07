@@ -123,8 +123,8 @@ def play_game(word, num_lives):
 
                 elif player_try not in word:
 
-                    message = f" {text_colors.RED}{(player_try)} is not in the"\
-                              f" word. You lose a life.{text_colors.WHITE}"
+                    message = f" {text_colors.RED}{(player_try)} is not in"\
+                              f" the word. You lose a life.{text_colors.WHITE}"
 
                     guesses.append(player_try)
                     lives -= 1
